@@ -45,14 +45,14 @@ require_once("db.php");
     <h1>Corpo de site</h1>
   </div>
   <footer id="footer">
-    <div class="social-container">
+    <div id="social-container">
       <ul>
         <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
         <li><a href="#"><i class="fab fa-youtube-square"></i></a></li>
         <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
       </ul>
     </div>
-    <div class="footer-links-container">
+    <div id="footer-links-container">
       <ul>
         <li><a href="">Adicionar Filmes</a></li>
         <li><a href="">Adicionar Crítica</a></li>
