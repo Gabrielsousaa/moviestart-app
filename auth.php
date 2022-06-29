@@ -25,7 +25,7 @@ require_once("templates/header.php");
           <input type="hidden" value="register" name="type">
           <div class="form-group">
             <label for="email">E-mail:</label>
-            <input type="email" class="form-control" placeholder="Digite o seu Email">
+            <input type="email" id="email" name="email" class="form-control" placeholder="Digite o seu Email">
           </div>
           <div class="form-group">
             <label for="name">Nome:</label>
@@ -40,8 +40,8 @@ require_once("templates/header.php");
             <input type="password" class="form-control" id="password" name="password" placeholder="Digite sua Senha">
           </div>
           <div class="form-group">
-            <label for="confirmPassword">Confirme a senha:</label>
-            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Digite sua Senha novamente">
+            <label for="confirmpassword">Confirme a senha:</label>
+            <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Digite sua Senha novamente">
           </div>
           <input type="submit" class="btn card-btn" value="Registrar">
         </form>
