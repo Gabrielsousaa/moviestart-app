@@ -20,7 +20,19 @@ if ($type === "register") {
   if ($name && $lastname && $email && $password) {
     if ($password === $confirmpassword) {
       if ($userDAO->findByEmail($email) === false) {
-        echo "Nenhum usuario encontrado";
+        $user = new User();
+        $userToken = $user->generateToken();
+        $finalPassword = $user->generatePassword($password);
+
+        $user->name = $name;
+        $user->lastname = $lastname;
+        $user->email = $email;
+        $user->password = $password;
+        $user->token = $userToken;
+
+        $auth = true;
+
+        $userDAO->create($user, $auth);
       } else {
         $message->setMessage("Email já cadastrado no sistema", "error", "back");
       }
