@@ -6,9 +6,9 @@ require_once("templates/header.php");
     <div class="row" id="auth-row">
       <div class="col-md-4" id="login-container">
         <h2>Entrar</h2>
-        <form action="" method="POST">
+        <form action="<?= $BASE_URL ?>auth_proccess.php" method="POST">
+          <input type="hidden" value="login" name="type">
           <div class="form-group">
-            <input type="hidden" value="login" name="type">
             <label for="email">Email</label>
             <input type="text" class="form-control" placeholder="Digite o seu Email">
           </div>
