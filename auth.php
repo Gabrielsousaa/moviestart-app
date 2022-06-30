@@ -10,7 +10,7 @@ require_once("templates/header.php");
           <input type="hidden" value="login" name="type">
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" class="form-control" placeholder="Digite o seu Email">
+            <input type="text" class="form-control" id="email" name="email" placeholder="Digite o seu Email">
           </div>
           <div class="form-group">
             <label for="password">Senha/Password</label>

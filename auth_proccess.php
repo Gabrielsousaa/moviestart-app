@@ -20,14 +20,16 @@ if ($type === "register") {
   if ($name && $lastname && $email && $password) {
     if ($password === $confirmpassword) {
       if ($userDAO->findByEmail($email) === false) {
+
         $user = new User();
+
         $userToken = $user->generateToken();
         $finalPassword = $user->generatePassword($password);
 
         $user->name = $name;
         $user->lastname = $lastname;
         $user->email = $email;
-        $user->password = $password;
+        $user->password = $finalPassword;
         $user->token = $userToken;
 
         $auth = true;
@@ -48,6 +50,7 @@ if ($type === "register") {
 
   //Tenta autenticar usuario
   if ($userDAO->authenticateUser($email, $password)) {
+    $message->setMessage("Seja bem-vindo!", "success", "editprofile.php");
   } else {
     $message->setMessage("Usuário e/ou senha incorretos", "error", "back");
   }
