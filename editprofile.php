@@ -16,7 +16,7 @@ if ($userData->image == "") {
 ?>
 <div id="main-container" class="container-fluid edit-profile-page">
   <div class="col-md-12">
-    <form action="<?= $BASE_URL ?>user_proccess.php" method="POST" enctype="multipart/form-data">
+    <form action="<?= $BASE_URL ?>user_process.php" method="POST" enctype="multipart/form-data">
       <input type="hidden" name="type" value="update">
       <div class="row">
         <div class="col-md-4">
@@ -39,12 +39,12 @@ if ($userData->image == "") {
         <div class="col-md-4">
           <div id="profile-image-container" style="background-image: url('<?= $BASE_URL ?>img/users/<?= $userData->image ?>')"></div>
           <div class="form-group">
-            <label for="name">Foto: </label>
+            <label for="image">Foto: </label>
             <input type="file" class="form-control-file" id="image" name="image">
           </div>
           <div class="form-group">
             <label for="bio">Bio: </label>
-            <textarea class="form-control" name="bio" id="bio" rows="2" placeholder="Conte quem você é , o que faz e onde trabalha"></textarea>
+            <textarea class="form-control" name="bio" id="bio" rows="2" placeholder="Conte quem você é , o que faz e onde trabalha"><?= $userData->bio ?></textarea>
           </div>
         </div>
       </div>
